@@ -42,10 +42,11 @@ by crediting knowledge by causality, the dual way of crediting knowledge by abst
 In fundamental Path Semantics, the time interpretation of the core axiom explains how to move propositional content from
 one moment in time to the next moment. This can not happen by some tautology in normal logic,
 so one has to study something like the core axiom to understand the logical properties of time.
+What makes the core axiom special is that it requires a "quality" operator.
 
-The research in fundamental Path Semantics has concluded that there exists a classical model of "quality" (`~~`),
+The research in fundamental Path Semantics has concluded that there exists a classical model of quality (`~~`),
 that is a partial equivalence relation (think "equality" without the "e" that represents reflection),
-by introducing a "qubit" operator `~` that is tautological congruent:
+by introducing a "qubit" operator `~` (it is tautological congruent `(a == b)^true => (~a == ~b)` with the HOOO EP axioms):
 
 ```
 (a ~~ b) == (~a & ~b & (a == b))
