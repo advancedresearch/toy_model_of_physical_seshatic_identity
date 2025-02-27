@@ -9,7 +9,7 @@ can only navigate through some space by a unique path defined by "laws of nature
 This space in the toy model is a 4x4 matrix to enable efficient enumeration of all possible worlds (using an `u16` type in Rust).
 While the player can have multiple choices, only one choice can lead to eventual an exit or "goal":
 
-```
+```text
 s ? ? ?    s = start
 ? ? ? ?    g = goal
 ? ? ? ?
@@ -179,7 +179,7 @@ The research in fundamental Path Semantics has concluded that there exists a cla
 that is a partial equivalence relation (think "equality" without the "e" that represents reflection),
 by introducing a "qubit" operator `~` (it is tautological congruent `(a == b)^true => (~a == ~b)` with the HOOO EP axioms):
 
-```
+```text
 (a ~~ b) == (~a & ~b & (a == b))
 ```
 
@@ -196,7 +196,7 @@ in Path Semantical sense (not how it was defined by Huxley).
 To model Seshatism relative to the core axiom of Path Semantics,
 one can define it as:
 
-```
+```test
 !~a
 ```
 
@@ -206,7 +206,7 @@ which explains why partial equivalence is so important for logical temporality.
 
 Negated reflexivity (some Hegelians might be familiar with the idea) has the property that no other proposition can be qual to it (think "equal" without the "e"):
 
-```
+```text
 !(a ~~ a) => !(a ~~ b)
 ```
 
