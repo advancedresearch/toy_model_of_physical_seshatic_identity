@@ -80,7 +80,9 @@ Negated reflexivity (some Hegelians might be familiar with the idea) has the pro
 ```
 
 Hence, Seshatism here models originality of logical propositions.
-It fits the intuition of physical metaphysical identity that a person exists in only one approximate location in space-time.
+It fits the intuition of metaphysical identity that a person exists in only one approximate location in space-time
+and can not be teleported somewhere else by copying the bits of information about the person (the no-cloning theorem in quantum physics)
+while preserving the original person.
 Therefore, it is called a "physical Seshatic identity".
 
 However, physical Seshatic identity is merely a play with a logical illusion,
