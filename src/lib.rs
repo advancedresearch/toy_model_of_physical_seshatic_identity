@@ -3,6 +3,8 @@
 
 use Cell::*;
 
+pub mod games;
+
 /// Represents a cell in the map.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 pub enum Cell {
@@ -149,11 +151,41 @@ impl Map {
     }
 }
 
+/// Represents a game.
+pub struct Game {
+    /// The name of the game.
+    pub name: String,
+    /// Laws of nature.
+    pub f: fn(&mut u16),
+    /// Configurate the map.
+    pub config: fn(&mut Map),
+}
+
 /// Copy bit from one location to another.
 pub fn move_bit(from: [usize; 2], to: [usize; 2], s: &mut u16) {
     let b = from[1] * 4 + from[0];
     let b2 = to[1] * 4 + to[0];
     if (*s >> b) & 1 == 1 {*s |= 1 << b2} else {*s &= !(1 << b2)}
+}
+
+/// Chain moves together.
+pub fn snake_bits(ps: &[[usize; 2]], s: &mut u16) {
+    for i in (1..ps.len()).rev() {
+        let j = i - 1;
+        move_bit(ps[j], ps[i], s);
+    }
+}
+
+/// Swap bits from one location with another.
+pub fn swap_bits(from: [usize; 2], to: [usize; 2], s: &mut u16) {
+    let a = get_bit(from, *s);
+    set_bit(from, get_bit(to, *s), s);
+    set_bit(to, a, s);
+}
+
+/// Toggles bit at some location.
+pub fn toggle_bit(at: [usize; 2], s: &mut u16) {
+    set_bit(at, !get_bit(at, *s), s);
 }
 
 /// Set bit in `u16` state.
