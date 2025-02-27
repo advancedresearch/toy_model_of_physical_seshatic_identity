@@ -29,8 +29,8 @@ In Ancient Greek terminology she might be thought of as a Muse (the deities that
 the institution that built the library of Alexandria),
 but Seshat pre-dates the idea of Muses so much that she must be treated as lost in historical obscurity at that time.
 
-When Plato wrote about Thoth, which is likely a later deity than Seshat, that took over some of her roles,
-he did not mention Seshat at all, which could signify that this knowledge was lost at the time when Plato writes.
+When Plato wrote about Thoth (which is likely a later deity than Seshat that took over some of her roles),
+he did not mention Seshat at all, which could signify that this knowledge was lost when Plato writes.
 Yet, this unbalanced representation of the mythology of the invention of writing violated the principle of Ma'at.
 Hence, Plato unleashed a "Pharaoh's curse" on humanity that might have set humanity on a path of self-destruction.
 
