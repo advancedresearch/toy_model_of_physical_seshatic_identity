@@ -77,6 +77,8 @@ impl Map {
     /// Performs a move.
     /// Returns `true` if it was valid, `false` otherwise.
     pub fn mov(&mut self, pos: [usize; 2]) -> bool {
+        if pos == [0, 0] {return false}
+
         let old_pos = self.player_pos;
         self.cells[self.player_pos[1]][self.player_pos[0]] = Follower;
         self.cells[pos[1]][pos[0]] = Player;
