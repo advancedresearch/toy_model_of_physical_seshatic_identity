@@ -21,6 +21,7 @@ pub enum Cell {
 }
 
 /// Represents the map of a game.
+#[derive(Clone)]
 pub struct Map {
     /// The current state of cells.
     pub cells: [[Cell; 4]; 4],
@@ -62,6 +63,17 @@ impl Map {
         true
     }
 
+    /// Gets the amount of information in the map.
+    pub fn information(&self) -> u8 {
+        let mut sum = 0;
+        for i in 0..4 {
+            for j in 0..4 {
+                if let Val(_) = self.cells[i][j] {sum += 1}
+            }
+        }
+        sum
+    }
+
     /// Performs a move.
     /// Returns `true` if it was valid, `false` otherwise.
     pub fn mov(&mut self, pos: [usize; 2]) -> bool {
@@ -69,8 +81,8 @@ impl Map {
         self.cells[self.player_pos[1]][self.player_pos[0]] = Follower;
         self.cells[pos[1]][pos[0]] = Player;
         self.player_pos = pos;
-        self.cells[0][0] = Follower;
 
+        let information = self.information();
         let mut valid = true;
         let mut filter1: u16 = u16::MAX;
         let mut filter2: u16 = 0;
@@ -116,6 +128,7 @@ impl Map {
                 }
             }
         }
+        if self.information() != information {valid = false}
 
         valid
     }
