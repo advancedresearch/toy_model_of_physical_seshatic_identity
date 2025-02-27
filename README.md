@@ -51,7 +51,7 @@ by introducing a "qubit" operator `~` that is tautological congruent:
 (a ~~ b) == (~a & ~b & (a == b))
 ```
 
-So, everything in this model can explained using only the qubit operator `~`.
+So, everything in this model can explained using only the qubit operator `~`, which extends normal logic to infinite-valued logic.
 Quality can simply be defined using the qubit operator and we get a more general model that looks more like quantum physics.
 It is not an actual quantum mechanical qubit operator, but it is similar enough to apply ideas from this research to the philosophy of physics.
 
