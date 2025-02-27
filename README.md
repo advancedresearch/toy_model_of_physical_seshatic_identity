@@ -31,7 +31,7 @@ but Seshat pre-dates the idea of Muses so much that she must be treated as lost 
 
 When Plato wrote about Thoth (which is likely a later deity than Seshat that took over some of her roles),
 he did not mention Seshat at all, which could signify that this knowledge was lost when Plato writes.
-Yet, this unbalanced representation of the mythology of the invention of writing violated the principle of Ma'at.
+Yet, this unbalanced representation of the mythology of the invention of writing, violated the principle of Ma'at.
 Hence, Plato unleashed a "Pharaoh's curse" on humanity that might have set humanity on a path of self-destruction.
 
 Seshatism is designed to represent the philosophy of restoration and reconstruction of history,
