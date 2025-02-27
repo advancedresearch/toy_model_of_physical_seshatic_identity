@@ -200,66 +200,63 @@ pub fn get_bit(a: [usize; 2], s: u16) -> bool {
     (s >> b) & 1 == 1
 }
 
-/// Does nothing.
-pub fn nop(_: &mut u16) {}
-
-/// Sets the output bit directly from the input bit.
-pub fn direct_win(s: &mut u16) {
-    move_bit([0, 0], [3, 3], s);
-}
-
-/// Sets the bit at `(1, 0)` to `1`.
-pub fn set_1_0_to_1(s: &mut u16) {
-    set_bit([1, 0], true, s);
-}
-
-/// Allows moving diagonally.
-pub fn diagonal(s: &mut u16) {
-    move_bit([2, 2], [3, 3], s);
-    move_bit([1, 1], [2, 2], s);
-    move_bit([0, 0], [1, 1], s);
-}
-
-/// Allows moving anywhere.
-pub fn anywhere(s: &mut u16) {
-    for i in 0..4 {
-        for j in 0..4 {
-            let pos = [i, j];
-            if pos == [0, 0] {continue}
-            move_bit([0, 0], pos, s);
-        }
-    }
-}
-
-/// Allow moving to either corner,
-/// but only allow reaching goal from top right corner.
-pub fn fake_choice(s: &mut u16) {
-    move_bit([3, 0], [3, 3], s);
-    move_bit([0, 0], [3, 0], s);
-    move_bit([0, 0], [0, 3], s);
-}
-
-/// Allow moving to either corner,
-/// but provides no way to reach the goal from either corner.
-///
-/// This is because there is some possible worlds where corners are not equal.
-pub fn fake_choice2(s: &mut u16) {
-    if get_bit([3, 0], *s) == get_bit([0, 3], *s) {
-        move_bit([3, 0], [3, 3], s);
-        assert_eq!(get_bit([0, 3], *s), get_bit([3, 0], *s));
-    }
-    move_bit([0, 0], [3, 0], s);
-    move_bit([0, 0], [0, 3], s);
-}
-
-/// Sets goal to zero.
-pub fn set_goal_to_zero(s: &mut u16) {
-    set_bit([3, 3], false, s);
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// Sets the output bit directly from the input bit.
+    pub fn direct_win(s: &mut u16) {
+        move_bit([0, 0], [3, 3], s);
+    }
+
+    /// Sets the bit at `(1, 0)` to `1`.
+    pub fn set_1_0_to_1(s: &mut u16) {
+        set_bit([1, 0], true, s);
+    }
+
+    /// Allows moving diagonally.
+    pub fn diagonal(s: &mut u16) {
+        move_bit([2, 2], [3, 3], s);
+        move_bit([1, 1], [2, 2], s);
+        move_bit([0, 0], [1, 1], s);
+    }
+
+    /// Allows moving anywhere.
+    pub fn anywhere(s: &mut u16) {
+        for i in 0..4 {
+            for j in 0..4 {
+                let pos = [i, j];
+                if pos == [0, 0] {continue}
+                move_bit([0, 0], pos, s);
+            }
+        }
+    }
+
+    /// Allow moving to either corner,
+    /// but only allow reaching goal from top right corner.
+    pub fn fake_choice(s: &mut u16) {
+        move_bit([3, 0], [3, 3], s);
+        move_bit([0, 0], [3, 0], s);
+        move_bit([0, 0], [0, 3], s);
+    }
+
+    /// Allow moving to either corner,
+    /// but provides no way to reach the goal from either corner.
+    ///
+    /// This is because there is some possible worlds where corners are not equal.
+    pub fn fake_choice2(s: &mut u16) {
+        if get_bit([3, 0], *s) == get_bit([0, 3], *s) {
+            move_bit([3, 0], [3, 3], s);
+            assert_eq!(get_bit([0, 3], *s), get_bit([3, 0], *s));
+        }
+        move_bit([0, 0], [3, 0], s);
+        move_bit([0, 0], [0, 3], s);
+    }
+
+    /// Sets goal to zero.
+    pub fn set_goal_to_zero(s: &mut u16) {
+        set_bit([3, 3], false, s);
+    }
 
     #[test]
     fn test_direct_win() {
