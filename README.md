@@ -90,7 +90,7 @@ due to being biased toward Platonism when selecting a core axiom of Path Semanti
 where `a ~~ a` is a non-tautological identity of the salvation/nirvana/enlightenment analogue in theology.
 This is an internal difference in philosophy, which means that the distinction can only be
 told internally within the same language.
-From the outside, `~a` and `!~a` can be swapped without being able to tell the difference.
+From the outside, `~a` and `!~a` can be swapped without being able to tell the difference (a flipped random bit vector looks random).
 
 With other words, one has to be careful to not view these ideas as ontological absolutes,
 but acknowledge that these are just language biases in the sense of the version of Wittgensteineanism applied in research of Path Semantics.
