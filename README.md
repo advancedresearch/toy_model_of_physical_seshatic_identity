@@ -123,6 +123,8 @@ Unlike most maze puzzles, this puzzle evaluates "laws of nature" over all possib
 and the player is only allowed to move such that the bit at the player's position is equal
 to the bit where the player wants to move.
 This must hold in every possible world, in order to provide a valid move.
+The "laws of nature" have no epistemological access to the player state,
+but treats each possible world as 4x4 bits where each cell is either 0 or 1.
 
 Since there are 4x4 bits, one gets `2^(4*4) = 65536` worlds to check before moving the player.
 So, the "laws of nature" are evaluated 65536 times by inserting bits into indeterminate cell values.
