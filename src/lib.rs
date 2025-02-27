@@ -74,17 +74,29 @@ impl Map {
         sum
     }
 
+    /// Gets the amount of followers in the map.
+    pub fn followers(&self) -> u8 {
+        let mut sum = 0;
+        for i in 0..4 {
+            for j in 0..4 {
+                if let Follower = self.cells[i][j] {sum += 1}
+            }
+        }
+        sum 
+    }
+
     /// Performs a move.
     /// Returns `true` if it was valid, `false` otherwise.
     pub fn mov(&mut self, pos: [usize; 2]) -> bool {
         if pos == [0, 0] {return false}
+        let followers = self.followers();
+        let information = self.information();
 
         let old_pos = self.player_pos;
         self.cells[self.player_pos[1]][self.player_pos[0]] = Follower;
         self.cells[pos[1]][pos[0]] = Player;
         self.player_pos = pos;
 
-        let information = self.information();
         let mut valid = true;
         let mut filter1: u16 = u16::MAX;
         let mut filter2: u16 = 0;
@@ -131,6 +143,7 @@ impl Map {
             }
         }
         if self.information() != information {valid = false}
+        if self.followers() != followers + 1 {valid = false}
 
         valid
     }
