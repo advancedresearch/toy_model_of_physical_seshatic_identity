@@ -133,7 +133,7 @@ There are 3 kinds of indeterminate cell values:
 
 - `Player`: Used to track movement of the player
 - `Follower`: Used to label the past of the player for easy visualization
-- `Unknown`: Indeterminate cell value that is not either player's position nor the player's past
+- `Unknown`: Indeterminate cell value that is neither player's position nor the player's past
 
 The basic idea is that the upper left corner can be treated as an input source of information.
 When the player starts the game, it can be thought of as entering the maze.
