@@ -80,7 +80,8 @@ With other words, one can design a map with prior observables which information 
 although the shape of that information might change over time.
 
 The trick used to give dynamics in observables is the analogue of the holographic principle in theoretical physics.
-All information within the space that might be used by "laws of nature" is preserved and can neither created nor destroyed by it.
+All information within the space that might be used by "laws of nature" is preserved and can neither be created nor destroyed by it
+(technically, only the information in the space, after "laws of nature" has been applied at least once, counts).
 There are some things the player can do that are not depending on this information,
 but in that case these things are possible to do in every possible world.
 Information encoded as observables allows greater variety in how the player can move,
