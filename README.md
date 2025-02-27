@@ -94,10 +94,11 @@ From the outside, `~a` and `!~a` can be swapped without being able to tell the d
 
 With other words, one has to be careful to not view these ideas as ontological absolutes,
 but acknowledge that these are just language biases in the sense of the version of Wittgensteineanism applied in research of Path Semantics.
-By applying Joker Calculus to classify language biases, it is currently believed that
+From experience of using Joker Calculus to classify language biases, it is currently believed that
 humans have evolved internalization of Joker Calculus to solve social problems,
 alternating between authenticity and inauthenticity in sense of Heidegger,
 in a way that is believed to biologically driven and not predicated on fundamental ontology of reality.
+This can be tested scientificially by observing changes in thought patterns resulting from stimuli biased by expressions in Joker Calculus.
 
 So, the Plato's cave metaphor applies inside mathematics as well.
 The divide between inside and outside the cave results in Inside and Outside theories of mathematics,
