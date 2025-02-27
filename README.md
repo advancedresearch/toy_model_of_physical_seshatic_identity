@@ -40,7 +40,7 @@ However, there is no way to tell what kind of bits will arrive into the maze as 
 Therefore, the game is set up such that all possible bits are checked,
 meaning that the player can move only when a move is possible regardless of the state of the bits.
 
-When reaching the goal, one has tracked the metaphysical identity of the dynamic bit that represents the player.
+When reaching the goal, one has tracked the metaphysical identity of the dynamic bit that represents the player through the maze.
 A finished game is a proof of the unique path through the maze that makes the bit at the goal position
 equal to the bit at the start position, but applying "laws of nature" some finite number of times.
 
