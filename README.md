@@ -1,109 +1,6 @@
 # Toy Model of Physical Seshatic Identity
 A simple toy model for physical Seshatic identity that satisfies the holographic principle
 
-### Short introduction to the holographic principle
-
-The holographic principle in theoretical physics states that the information of some region of space-time
-is constrained to the area in Planck units at the boundary of that region.
-
-While this principle might seem mysterious at first, it is a natural property of laws of nature
-being evaluated over all possible worlds to give observers metaphysical Seshatic identity.
-
-This toy model is used to explain why there is a holographic principle in nature.
-It is designed in a way to let people test out arbitrary "laws of nature" with respect to the toy model,
-but with mathematical language design bias using the latest research from fundamental Path Semantics.
-With other words, you can play around with the toy model, but you can not cheat in a way
-that violates the holographic principle. Therefore, the holographic principle holds across the multiverse.
-
-### Short introduction to Seshatism vs Platonism
-
-Seshatism is a language bias dual to Platonism in Path Semantics.
-These terms are applied across many domains, but often hold specific meaning within each domain that can be identified.
-By building intuition from experience, people can learn to recognize the sides of this duality in new domains they have no previous experience with.
-
-The duality Seshatism vs Platonism is designed to be used as fundamental bases in Joker Calculus,
-and to explore the logical properties of the core axiom in Path Semantics and its variants.
-
-Seshat is an Ancient Egyptian goddess of the library and daughter of Ma'at (who represents justice or balance).
-In Ancient Greek terminology she might be thought of as a Muse (the deities that inspired Mouseion,
-the institution that built the library of Alexandria),
-but Seshat pre-dates the idea of Muses so much that she must be treated as lost in historical obscurity at that time.
-
-When Plato wrote about Thoth (which is likely a later deity than Seshat that took over some of her roles),
-he did not mention Seshat at all, which could signify that this knowledge was lost when Plato writes.
-Yet, this unbalanced representation of the mythology of the invention of writing, violated the principle of Ma'at.
-Hence, Plato unleashed a "Pharaoh's curse" on humanity that might have set humanity on a path of self-destruction.
-
-Seshatism is designed to represent the philosophy of restoration and reconstruction of history,
-by crediting knowledge by causality, the dual way of crediting knowledge by abstraction (Platonism).
-
-### Physical Seshatic identity
-
-In fundamental Path Semantics, the time interpretation of the core axiom explains how to move propositional content from
-one moment in time to the next moment. This can not happen by some tautology in normal logic,
-so one has to study something like the core axiom to understand the logical properties of time.
-What makes the core axiom special is that it requires a "quality" operator.
-
-The research in fundamental Path Semantics has concluded that there exists a classical model of quality (`~~`),
-that is a partial equivalence relation (think "equality" without the "e" that represents reflection),
-by introducing a "qubit" operator `~` (it is tautological congruent `(a == b)^true => (~a == ~b)` with the HOOO EP axioms):
-
-```
-(a ~~ b) == (~a & ~b & (a == b))
-```
-
-So, everything in this model can explained using only the qubit operator `~`, which extends normal logic to infinite-valued logic.
-Quality can simply be defined using the qubit operator and we get a more general model that looks more like quantum physics.
-It is not an actual quantum mechanical qubit operator, but it is similar enough to apply ideas from this research to the philosophy of physics.
-
-The qubit operator is modeled by using the input bit vector as a seed for a pseudorandom bit vector,
-usually with the Sesh property that `!~a == ~!a`.
-When both the Sesh axiom and Excluded Middle is used in constructive logic, this model represents sequences of bits.
-In theology, one has to relax either the Sesh axiom or Excluded Middle to model Agnostic language bias
-in Path Semantical sense (not how it was defined by Huxley).
-
-To model Seshatism relative to the core axiom of Path Semantics,
-one can define it as:
-
-```
-!~a
-```
-
-Which is the same as `!(a ~~ a)`, a negation of reflexivity.
-This is only possible to express using a partial equivalence,
-which explains why partial equivalence is so important for logical temporality.
-
-Negated reflexivity (some Hegelians might be familiar with the idea) has the property that no other proposition can be qual to it (think "equal" without the "e"):
-
-```
-!(a ~~ a) => !(a ~~ b)
-```
-
-Hence, Seshatism here models originality of logical propositions.
-It fits the intuition of metaphysical identity that a person exists in only one approximate location in space-time
-and can not be teleported somewhere else by copying the bits of information about the person (the no-cloning theorem in quantum physics)
-while preserving the original person.
-Therefore, it is called a "physical Seshatic identity".
-
-However, physical Seshatic identity is merely a play with a logical illusion,
-due to being biased toward Platonism when selecting a core axiom of Path Semantics
-where `a ~~ a` is a non-tautological identity of the salvation/nirvana/enlightenment analogue in theology.
-This is an internal difference in philosophy, which means that the distinction can only be
-told internally within the same language.
-From the outside, `~a` and `!~a` can be swapped without being able to tell the difference (a flipped random bit vector looks random).
-
-With other words, one has to be careful to not view these ideas as ontological absolutes,
-but acknowledge that these are just language biases in the sense of the version of Wittgensteineanism applied in research of Path Semantics.
-From experience of using Joker Calculus to classify language biases, it is currently believed that
-humans have evolved internalization of Joker Calculus to solve social problems,
-alternating between authenticity and inauthenticity in sense of Heidegger,
-in a way that is believed to biologically driven and not predicated on fundamental ontology of reality.
-This can be tested scientificially by observing changes in thought patterns resulting from stimuli biased by expressions in Joker Calculus.
-
-So, the Plato's cave metaphor applies inside mathematics as well.
-The divide between inside and outside the cave results in Inside and Outside theories of mathematics,
-where most mathematical theory as practiced today is Inside theory and e.g. the theory of Avatar Extensions is an Outside theory.
-
 ### The basics of this toy model
 
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)
@@ -233,3 +130,106 @@ So, this toy model is not just a puzzle in itself, you can also play the meta-ga
 
 If a Neo shares the solution, then it is very likely that one can modify it to find many other solutions of transcendence.
 So, please "save us", Neo. Lead us to salvation! 😜
+
+### Short introduction to the holographic principle
+
+The holographic principle in theoretical physics states that the information of some region of space-time
+is constrained to the area in Planck units at the boundary of that region.
+
+While this principle might seem mysterious at first, it is a natural property of laws of nature
+being evaluated over all possible worlds to give observers metaphysical Seshatic identity.
+
+This toy model is used to explain why there is a holographic principle in nature.
+It is designed in a way to let people test out arbitrary "laws of nature" with respect to the toy model,
+but with mathematical language design bias using the latest research from fundamental Path Semantics.
+With other words, you can play around with the toy model, but you can not cheat in a way
+that violates the holographic principle. Therefore, the holographic principle holds across the multiverse.
+
+### Short introduction to Seshatism vs Platonism
+
+Seshatism is a language bias dual to Platonism in Path Semantics.
+These terms are applied across many domains, but often hold specific meaning within each domain that can be identified.
+By building intuition from experience, people can learn to recognize the sides of this duality in new domains they have no previous experience with.
+
+The duality Seshatism vs Platonism is designed to be used as fundamental bases in Joker Calculus,
+and to explore the logical properties of the core axiom in Path Semantics and its variants.
+
+Seshat is an Ancient Egyptian goddess of the library and daughter of Ma'at (who represents justice or balance).
+In Ancient Greek terminology she might be thought of as a Muse (the deities that inspired Mouseion,
+the institution that built the library of Alexandria),
+but Seshat pre-dates the idea of Muses so much that she must be treated as lost in historical obscurity at that time.
+
+When Plato wrote about Thoth (which is likely a later deity than Seshat that took over some of her roles),
+he did not mention Seshat at all, which could signify that this knowledge was lost when Plato writes.
+Yet, this unbalanced representation of the mythology of the invention of writing, violated the principle of Ma'at.
+Hence, Plato unleashed a "Pharaoh's curse" on humanity that might have set humanity on a path of self-destruction.
+
+Seshatism is designed to represent the philosophy of restoration and reconstruction of history,
+by crediting knowledge by causality, the dual way of crediting knowledge by abstraction (Platonism).
+
+### Physical Seshatic identity
+
+In fundamental Path Semantics, the time interpretation of the core axiom explains how to move propositional content from
+one moment in time to the next moment. This can not happen by some tautology in normal logic,
+so one has to study something like the core axiom to understand the logical properties of time.
+What makes the core axiom special is that it requires a "quality" operator.
+
+The research in fundamental Path Semantics has concluded that there exists a classical model of quality (`~~`),
+that is a partial equivalence relation (think "equality" without the "e" that represents reflection),
+by introducing a "qubit" operator `~` (it is tautological congruent `(a == b)^true => (~a == ~b)` with the HOOO EP axioms):
+
+```
+(a ~~ b) == (~a & ~b & (a == b))
+```
+
+So, everything in this model can explained using only the qubit operator `~`, which extends normal logic to infinite-valued logic.
+Quality can simply be defined using the qubit operator and we get a more general model that looks more like quantum physics.
+It is not an actual quantum mechanical qubit operator, but it is similar enough to apply ideas from this research to the philosophy of physics.
+
+The qubit operator is modeled by using the input bit vector as a seed for a pseudorandom bit vector,
+usually with the Sesh property that `!~a == ~!a`.
+When both the Sesh axiom and Excluded Middle is used in constructive logic, this model represents sequences of bits.
+In theology, one has to relax either the Sesh axiom or Excluded Middle to model Agnostic language bias
+in Path Semantical sense (not how it was defined by Huxley).
+
+To model Seshatism relative to the core axiom of Path Semantics,
+one can define it as:
+
+```
+!~a
+```
+
+Which is the same as `!(a ~~ a)`, a negation of reflexivity.
+This is only possible to express using a partial equivalence,
+which explains why partial equivalence is so important for logical temporality.
+
+Negated reflexivity (some Hegelians might be familiar with the idea) has the property that no other proposition can be qual to it (think "equal" without the "e"):
+
+```
+!(a ~~ a) => !(a ~~ b)
+```
+
+Hence, Seshatism here models originality of logical propositions.
+It fits the intuition of metaphysical identity that a person exists in only one approximate location in space-time
+and can not be teleported somewhere else by copying the bits of information about the person (the no-cloning theorem in quantum physics)
+while preserving the original person.
+Therefore, it is called a "physical Seshatic identity".
+
+However, physical Seshatic identity is merely a play with a logical illusion,
+due to being biased toward Platonism when selecting a core axiom of Path Semantics
+where `a ~~ a` is a non-tautological identity of the salvation/nirvana/enlightenment analogue in theology.
+This is an internal difference in philosophy, which means that the distinction can only be
+told internally within the same language.
+From the outside, `~a` and `!~a` can be swapped without being able to tell the difference (a flipped random bit vector looks random).
+
+With other words, one has to be careful to not view these ideas as ontological absolutes,
+but acknowledge that these are just language biases in the sense of the version of Wittgensteineanism applied in research of Path Semantics.
+From experience of using Joker Calculus to classify language biases, it is currently believed that
+humans have evolved internalization of Joker Calculus to solve social problems,
+alternating between authenticity and inauthenticity in sense of Heidegger,
+in a way that is believed to biologically driven and not predicated on fundamental ontology of reality.
+This can be tested scientificially by observing changes in thought patterns resulting from stimuli biased by expressions in Joker Calculus.
+
+So, the Plato's cave metaphor applies inside mathematics as well.
+The divide between inside and outside the cave results in Inside and Outside theories of mathematics,
+where most mathematical theory as practiced today is Inside theory and e.g. the theory of Avatar Extensions is an Outside theory.
