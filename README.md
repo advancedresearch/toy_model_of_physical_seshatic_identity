@@ -27,7 +27,7 @@ and to explore the logical properties of the core axiom in Path Semantics and it
 Seshat is an Ancient Egyptian goddess of the library and daughter of Ma'at (who represents justice or balance).
 In Ancient Greek terminology she might be thought of as a Muse (the deities that inspired Mouseion,
 the institution that built the library of Alexandria),
-but Seshat pre-dates the idea of Muses so much that she must be treated as lost in historical obscurity in that time.
+but Seshat pre-dates the idea of Muses so much that she must be treated as lost in historical obscurity at that time.
 
 When Plato wrote about Thoth, which is likely a later deity than Seshat, that took over some of her roles,
 he did not mention Seshat at all, which could signify that this knowledge was lost at the time when Plato writes.
