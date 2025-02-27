@@ -1,0 +1,6 @@
+[package]
+name = "advancedresearch-toy_model_of_physical_seshatic_identity"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
