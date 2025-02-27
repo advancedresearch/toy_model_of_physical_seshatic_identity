@@ -51,7 +51,7 @@ It is possible to construct puzzles that have no solution,
 but if there exists some solution, then there is only one solution, a unique path.
 This semantics of a unique path in game design is unusual,
 because the number of paths usually explodes combinatorially.
-Yet, this setup provides a guarantee of at most unique path as solution,
+Yet, this setup provides a guarantee of at most one path as solution,
 by leveraging mathematical language bias design.
 While all possible paths are not evaluated directly,
 it follows from the way "laws of nature" are evaluated across possible worlds.
