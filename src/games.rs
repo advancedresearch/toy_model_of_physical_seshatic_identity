@@ -64,3 +64,43 @@ pub fn clock() -> Game {
     }
 }
 
+/// You have to move in some circles before exiting.
+pub fn coil() -> Game {
+    Game {
+        name: "Coil".to_string(),
+        f: |s: &mut u16| {
+            move_bit([3, 2], [3, 3], s);
+            move_bit([3, 1], [3, 2], s);
+            if get_bit([0, 1], *s) && !get_bit([0, 2], *s) && !get_bit([0, 3], *s) {
+                move_bit([2, 1], [3, 1], s);
+            }
+
+            if get_bit([0, 1], *s) && get_bit([0, 2], *s) ||
+               get_bit([0, 1], *s) && !get_bit([0, 2], *s) && get_bit([0, 3], *s) {
+                move_bit([2, 1], [1, 1], s);
+            }
+            
+            move_bit([2, 2], [2, 1], s);
+            move_bit([2, 3], [2, 2], s);
+            move_bit([1, 3], [2, 3], s);
+            move_bit([1, 2], [1, 3], s);
+            move_bit([1, 1], [1, 2], s);
+            if get_bit([0, 1], *s) && !get_bit([0, 2], *s) && !get_bit([0, 3], *s) {
+                move_bit([1, 0], [1, 1], s);
+            }
+            move_bit([0, 0], [1, 0], s);
+            if get_bit([0, 1], *s) {
+                if get_bit([0, 2], *s) {
+                    toggle_bit([0, 3], s);
+                }
+                toggle_bit([0, 2], s);
+            }
+            toggle_bit([0, 1], s);
+        },
+        config: |map: &mut Map| {
+            map.cells[1][0] = Cell::Val(false);
+            map.cells[2][0] = Cell::Val(false);
+            map.cells[3][0] = Cell::Val(false);
+        },
+    }
+}
