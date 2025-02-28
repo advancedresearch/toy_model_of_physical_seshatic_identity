@@ -1,6 +1,8 @@
 # Toy Model of Physical Seshatic Identity
 A simple toy model for physical Seshatic identity that satisfies the holographic principle
 
+![clock](./images/clock.png)
+
 ### The basics of this toy model
 
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)

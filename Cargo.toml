@@ -8,6 +8,7 @@ license = "MIT OR Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/advancedresearch/toy_model_of_physical_seshatic_identity.git"
 homepage = "https://github.com/advancedresearch/toy_model_of_physical_seshatic_identity"
+exclude = ["images/*"]
 
 [lib]
 name = "holomaze"
