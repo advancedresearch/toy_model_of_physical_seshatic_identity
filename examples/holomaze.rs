@@ -28,6 +28,7 @@ fn main() {
         games::diagonal(),
         games::snake(),
         games::clock(),
+        games::coil(),
     ];
     let mut game_ind = 0;
 
