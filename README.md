@@ -50,6 +50,12 @@ However, there is no way to tell what kind of bits will arrive into the maze as 
 Therefore, the game is set up such that all possible bits are checked,
 meaning that the player can move only when a move is possible regardless of the state of the bits.
 
+Since new bits arrive into the maze after the player,
+the player can not block the entry to the maze.
+Entering the maze is only valid if all futures and all pasts allow entering the maze.
+So, over time, the number of followers in the maze increments with each time step.
+Neither can any observable block the entry and prevent new followers from entering the maze.
+
 When reaching the goal, one has tracked the metaphysical identity of the dynamic bit that represents the player through the maze.
 A finished game is a proof of the unique path through the maze that makes the bit at the goal position
 equal to the bit at the start position, but applying "laws of nature" some finite number of times.
@@ -64,7 +70,8 @@ because the number of paths usually explodes combinatorially.
 Yet, this setup provides a guarantee of at most one path as solution,
 by leveraging mathematical language bias design.
 While all possible paths are not evaluated directly,
-it follows from the way "laws of nature" are evaluated across possible worlds.
+it follows from the way "laws of nature" are evaluated across possible worlds,
+plus the requirement that the player can not block followers from entering the maze.
 
 The "laws of nature" might allow teleportation, so there are `(4*4)! = 20 922 789 888 000`,
 almost 21 trillion possible paths!
@@ -92,6 +99,8 @@ although the shape of that information might change over time.
 The trick used to give dynamics in observables is the analogue of the holographic principle in theoretical physics.
 All information within the space that might be used by "laws of nature" is preserved and can neither be created nor destroyed by it
 (technically, only the information in the space, after "laws of nature" has been applied at least once, counts).
+This is ensured by counting the observables before moves and after and the move becomes invalid if information is created or destroyed.
+
 There are some things the player can do that are not depending on this information,
 but in that case these things are possible to do in every possible world.
 Information encoded as observables allows greater variety in how the player can move,
