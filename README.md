@@ -34,7 +34,7 @@ use holomaze::*;
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)
 can only navigate through some space by a unique path defined by "laws of nature".
 
-This space in the toy model is a 4x4 matrix to enable efficient enumeration of all possible worlds (using an `u16` type in Rust).
+This space in the toy model is a 4x4 matrix to enable efficient enumeration of all possible worlds (using the `u16` type in Rust).
 While the player can have multiple choices, only one choice can lead to eventual an exit or "goal":
 
 ```text
@@ -45,7 +45,7 @@ s ? ? ?    s = start
 ```
 
 Unlike most maze puzzles, this puzzle evaluates "laws of nature" over all possible worlds,
-and the player is only allowed to move such that the bit at the player's position is equal
+and the player is only allowed to move such that the bit at the player's old position is equal
 to the bit where the player wants to move.
 This must hold in every possible world, in order to provide a valid move.
 The "laws of nature" have no epistemological access to the player state,
@@ -53,6 +53,9 @@ but treats each possible world as 4x4 bits where each cell is either 0 or 1.
 
 Since there are 4x4 bits, one gets `2^(4*4) = 65536` worlds to check before moving the player.
 So, the "laws of nature" are evaluated 65536 times by inserting bits into indeterminate cell values.
+This is done twice, one to check for valid player moves among possible worlds,
+two to perform a Dr. Strange check that no impossible world can result in the new world.
+The Dr. Strange check makes sure that there exists some reversible algorithm to the "laws of nature".
 
 There are 3 kinds of indeterminate cell values:
 
@@ -66,21 +69,30 @@ As time goes by, when the player moves around in the maze,
 new bits of information arrives into the maze, that can influence the player's ability to reach the goal.
 However, there is no way to tell what kind of bits will arrive into the maze as time goes by.
 Therefore, the game is set up such that all possible bits are checked,
-meaning that the player can move only when a move is possible regardless of the state of the bits.
+meaning that the player can move only when the move is possible regardless of the state of the bits.
+This allows the player state to be indeterminate, that is never any specific configuration of bits.
+The player is all possible states that the player can be.
 
 Since new bits arrive into the maze after the player,
 the player can not block the entry to the maze.
-Entering the maze is only valid if all futures and all pasts allow entering the maze.
-So, over time, the number of followers in the maze increments with each time step.
-Neither can any observable block the entry and prevent new followers from entering the maze.
+If this is allowed, then in many puzzles the player can cheat by moving time forward while standing still in the top left corner.
+The cheat is not allowed because it would provide multiple paths to the goal.
+There are some cases where a player can stand still in the middle of the maze,
+e.g. when there is a conditional move, but this is either intentional by the designer of the puzzle,
+either to find the correct path or to mislead the player,
+or it can be an unintentional dead end that was not caught under testing the puzzle.
 
 When reaching the goal, one has tracked the metaphysical identity of the dynamic bit that represents the player through the maze.
 A finished game is a proof of the unique path through the maze that makes the bit at the goal position
 equal to the bit at the start position, but applying "laws of nature" some finite number of times.
 
+There are two sides to the gameplay: People who solve puzzles and people who design puzzles.
+They both have to follow the rules, but there is no need to check manually that the rules are followed.
+If the rules are broken, the intended puzzle design will simply not work.
 The game is set up such that there is no way to cheat, for neither "laws of nature", nor the player.
 One can build different mazes by swapping out "laws of nature",
 which represents puzzle challenges to the player.
+
 It is possible to construct puzzles that have no solution,
 but if there exists some solution, then there is only one solution, a unique path.
 This semantics of a unique path in game design is unusual,
@@ -91,7 +103,13 @@ While all possible paths are not evaluated directly,
 it follows from the way "laws of nature" are evaluated across possible worlds,
 plus the requirement that the player can not block followers from entering the maze.
 
-The "laws of nature" might allow teleportation, so there are `(4*4)! = 20 922 789 888 000`,
+The Dr. Strange check is simply to help the puzzle designer discover bugs
+that might happen under other possible world that the ones being tested.
+To simulate physical Seshatic identity, you want the property that time direction can be reversed in principle.
+
+When there are no observables, the "laws of nature" has no available memory and the player is not able to move in circles.
+So, analytically, this is the simplest case to reason about.
+The "laws of nature" (even without observables) might allow teleportation, so there are `(4*4)! = 20 922 789 888 000`,
 almost 21 trillion possible paths!
 This is would be very expensive to check one by one with today's technology.
 So, the only practical way to design this toy model is by leveraging mathematical language bias design.
@@ -114,15 +132,19 @@ This trick results in possible dynamics, but only if there exists some observabl
 With other words, one can design a map with prior observables which information gets preserved,
 although the shape of that information might change over time.
 
+For example, when designing a clock, one allocates prior observables and makes "laws of nature" toggle these bits using e.g. binary counting.
+
 The trick used to give dynamics in observables is the analogue of the holographic principle in theoretical physics.
+
 All information within the space that might be used by "laws of nature" is preserved and can neither be created nor destroyed by it
 (technically, only the information in the space, after "laws of nature" has been applied at least once, counts).
-This is ensured by counting the observables before moves and after and the move becomes invalid if information is created or destroyed.
+This is ensured by counting the observables before and after moves.
+The move becomes invalid if information is created or destroyed.
 
 There are some things the player can do that are not depending on this information,
 but in that case these things are possible to do in every possible world.
 Information encoded as observables allows greater variety in how the player can move,
-which essentially brings the number of paths from 21 trillion to infinity.
+which essentially brings the number of paths from 21 trillion to ... well... a very huge number (how to calculate this is an open problem).
 So, it is possible to design puzzles where the player gets stuck in the maze, for all eternity.
 There might also be just one such path, that the player only survives for eternity when making one correct choice at each moment in time.
 
