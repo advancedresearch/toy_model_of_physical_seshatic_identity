@@ -3,6 +3,14 @@ A simple toy model for physical Seshatic identity that satisfies the holographic
 
 ![clock](./images/clock.png)
 
+The above screenshot is from a simple clock ticking while moving through the maze.
+
+- Yellow: `Player` (current position of the player)
+- Green: `Follower` (past positions of the player)
+- Empty: `Unknown` (indeterminate value)
+- Red: `0` (observable)
+- Blue: `1` (observable)
+
 ### The basics of this toy model
 
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)
