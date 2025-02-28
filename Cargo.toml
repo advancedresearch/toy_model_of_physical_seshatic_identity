@@ -1,6 +1,6 @@
 [package]
 name = "advancedresearch-toy_model_of_physical_seshatic_identity"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 keywords = ["advancedresearch", "philosophy", "theorem", "proving", "puzzle-game"]
 description = "A simple toy model for physical Seshatic identity that satisfies the holographic principle"
