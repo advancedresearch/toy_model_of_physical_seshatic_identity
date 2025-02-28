@@ -29,6 +29,10 @@ To use this library in a Rust project, add it to Cargo toml and import by the fo
 use holomaze::*;
 ```
 
+### Useful links
+
+- [List of Open Problems](https://github.com/advancedresearch/toy_model_of_physical_seshatic_identity/issues/16)
+
 ### The basics of this toy model
 
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)
