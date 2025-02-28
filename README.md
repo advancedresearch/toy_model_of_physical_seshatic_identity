@@ -11,6 +11,24 @@ The above screenshot is from a simple clock ticking while moving through the maz
 - Red: `0` (observable)
 - Blue: `1` (observable)
 
+To install the demo:
+
+```text
+cargo cargo install --example advancedresearch-toy_model_of_physical_seshatic_identity holomaze
+```
+
+To run the demo:
+
+```text
+holomaze
+```
+
+To use this library in a Rust project, add it to Cargo toml and import by the following:
+
+```text
+use holomaze::*;
+```
+
 ### The basics of this toy model
 
 Physical Seshatic identity is modeled by designing a mathematical language bias such that a player (represented as `Player`)
