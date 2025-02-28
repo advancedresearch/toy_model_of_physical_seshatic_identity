@@ -91,7 +91,6 @@ impl Map {
     /// Returns `true` if it was valid, `false` otherwise.
     pub fn mov(&mut self, pos: [usize; 2]) -> bool {
         if pos == [0, 0] {return false}
-        let followers = self.followers();
         let information = self.information();
 
         let old_pos = self.player_pos;
@@ -120,15 +119,19 @@ impl Map {
             (self.f)(&mut t);
             let b2 = pos[1] * 4 + pos[0];
             let new_player_state = (t >> b2) & 1 == 1;
-            if new_player_state != old_player_state {valid = false}
+            if new_player_state != old_player_state {
+                valid = false;
+                break;
+            }
             filter1 &= t;
             filter2 |= t;
         }
-
         if !valid {
             self.cells[self.player_pos[1]][self.player_pos[0]] = Follower;
         }
 
+        // Update cells with new observables.
+        let old_cells = self.cells.clone();
         for i in 0..4 {
             for j in 0..4 {
                 let b = i * 4 + j;
@@ -144,8 +147,42 @@ impl Map {
                 }
             }
         }
-        if self.information() != information {valid = false}
-        if self.followers() != followers + 1 {valid = false}
+        if self.information() != information {return false}
+
+        // Check that no other states outside possible worlds
+        // can result in a match against this new world.
+        'other_state: for s2 in 0..=u16::MAX {
+            let mut match_all = true;
+            for i in 0..4 {
+                for j in 0..4 {
+                    let b = i * 4 + j;
+                    let v = (s2 >> b) & 1 == 1;
+                    match old_cells[i][j] {
+                        Player | Follower | Unknown => {}
+                        Val(a) => if v != a {match_all = false}
+                    }
+                }
+            }
+            if match_all {continue 'other_state}
+
+            let mut t2 = s2;
+            (self.f)(&mut t2);
+            let mut match_all = true;
+            for i in 0..4 {
+                for j in 0..4 {
+                    let b = i * 4 + j;
+                    let v = (t2 >> b) & 1 == 1;
+                    match self.cells[i][j] {
+                        Player | Follower | Unknown => {}
+                        Val(a) => if v != a {match_all = false}
+                    }
+                }
+            }
+            if match_all {
+                valid = false;
+                break 'other_state;
+            }
+        }
 
         valid
     }
