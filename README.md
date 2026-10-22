@@ -23,6 +23,13 @@ To run the demo:
 holomaze
 ```
 
+### Player instructions
+
+- Click on nearby squares with mouse cursor to move
+- Up/down arrow changes the puzzle
+
+### Use as library
+
 To use this library in a Rust project, add it to Cargo toml and import by the following:
 
 ```text
