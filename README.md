@@ -14,7 +14,7 @@ The above screenshot is from a simple clock ticking while moving through the maz
 To install the demo:
 
 ```text
-cargo cargo install --example advancedresearch-toy_model_of_physical_seshatic_identity holomaze
+cargo install --example holomaze advancedresearch-toy_model_of_physical_seshatic_identity
 ```
 
 To run the demo:
